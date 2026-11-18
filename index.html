@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My First Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f7fb;
+            color: #222;
+        }
+
+        /* Navigation */
+        header {
+            background: #10243a;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* Hero section */
+        .hero {
+            min-height: 480px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #10243a, #176b87);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            line-height: 1.7;
+        }
+
+        .hero button {
+            margin-top: 25px;
+            padding: 14px 30px;
+            background: #38bdf8;
+            color: #10243a;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Main sections */
+        section {
+            padding: 65px 8%;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #10243a;
+        }
+
+        section p {
+            line-height: 1.7;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #00000012;
+        }
+
+        .service-card h3 {
+            color: #176b87;
+            margin-bottom: 15px;
+        }
+
+        /* Contact */
+        .contact {
+            background: #e5eef5;
+        }
+
+        footer {
+            background: #10243a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">MY WEBSITE</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero" id="home">
+        <h1>Welcome to My Website</h1>
+
+        <p>
+            This is my first website created using HTML,
+            CSS and JavaScript. I am learning web development
+            and using GitHub to publish my website online.
+        </p>
+
+        <button onclick="showMessage()">
+            Explore Website
+        </button>
+    </div>
+
+    <section id="about">
+        <h2>About Us</h2>
+
+        <p>
+            Welcome to our website. This platform is designed
+            to share information, services and useful resources
+            with visitors around the world.
+        </p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+
+        <div class="services">
+
+            <div class="service-card">
+                <h3>Web Development</h3>
+                <p>Creating modern and responsive websites.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Online Services</h3>
+                <p>Providing useful online information.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Technical Support</h3>
+                <p>Helping users with technical solutions.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+
+        <p>Email: example@email.com</p>
+        <p>Phone: +94 77 123 4567</p>
+    </section>
+
+    <footer>
+        <p>© 2026 My Website | All Rights Reserved</p>
+        <p>Created with HTML, CSS and JavaScript</p>
+    </footer>
+
+    <script>
+        function showMessage() {
+            alert("Welcome! Thank you for visiting my website.");
+        }
+    </script>
+
+</body>
+</html>
